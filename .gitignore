@@ -1,0 +1,4 @@
+postgresql/
+target/
+k6/*.html
+sysbench_raw_*.txt
