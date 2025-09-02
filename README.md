@@ -131,7 +131,7 @@ sysbench \
 --time=10 \
 --db-driver="pgsql" \
 --pgsql-host="container_postgresql" \
---pgsql-port=3306 \
+--pgsql-port=5432 \
 --pgsql-user="testuser" \
 --pgsql-password="testpass" \
 --pgsql-db="testdb" \
@@ -153,7 +153,7 @@ sysbench \
 --time=10 \
 --db-driver="pgsql" \
 --pgsql-host="container_postgresql" \
---pgsql-port=3306 \
+--pgsql-port=5432 \
 --pgsql-user="testuser" \
 --pgsql-password="testpass" \
 --pgsql-db="testdb" \
@@ -175,7 +175,7 @@ sysbench \
 --time=10 \
 --db-driver="pgsql" \
 --pgsql-host="container_postgresql" \
---pgsql-port=3306 \
+--pgsql-port=5432 \
 --pgsql-user="testuser" \
 --pgsql-password="testpass" \
 --pgsql-db="testdb" \
