@@ -135,7 +135,7 @@ async fn ensure_schema(pool: &Pool<Postgres>) -> anyhow::Result<()> {
 }
 
 async fn handle_root() -> impl IntoResponse {
-  (StatusCode::OK, Json(Msg { message: "Hello World from Rust" }))
+  (StatusCode::OK, Json(Msg { message: "Hello World from Rust (PostgreSQL)" }))
 }
 
 async fn create_user(

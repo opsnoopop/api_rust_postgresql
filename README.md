@@ -63,17 +63,17 @@ CREATE TABLE IF NOT EXISTS public.users (
 
 ### Health Check
 ```bash
-curl -X GET http://localhost:3000/
+curl -X GET http://localhost/
 ```
 
 ### Create user
 ```bash
-curl -X POST http://localhost:3000/users -H 'Content-Type: application/json' -d '{"username":"optest","email":"opsnoopop@hotmail.com"}'
+curl -X POST http://localhost/users -H 'Content-Type: application/json' -d '{"username":"optest","email":"opsnoopop@hotmail.com"}'
 ```
 
 ### Get user
 ```bash
-curl -X GET http://localhost:3000/users/1
+curl -X GET http://localhost/users/1
 ```
 
 
@@ -124,7 +124,7 @@ docker run \
 --name container_ubuntu_tool \
 --rm \
 -it \
---network global_rust \
+--network global_optest \
 opsnoopop/ubuntu-tool:1.0 \
 sysbench \
 --threads=2 \
@@ -146,7 +146,7 @@ docker run \
 --name container_ubuntu_tool \
 --rm \
 -it \
---network global_rust \
+--network global_optest \
 opsnoopop/ubuntu-tool:1.0 \
 sysbench \
 --threads=2 \
@@ -168,7 +168,7 @@ docker run \
 --name container_ubuntu_tool \
 --rm \
 -it \
---network global_rust \
+--network global_optest \
 opsnoopop/ubuntu-tool:1.0 \
 sysbench \
 --threads=2 \
@@ -193,7 +193,7 @@ docker run \
 --name container_k6 \
 --rm \
 -it \
---network global_rust \
+--network global_optest \
 -v ./k6/:/k6/ \
 grafana/k6:1.1.0 \
 run /k6/k6_1_ramping_health_check.js
@@ -205,7 +205,7 @@ docker run \
 --name container_k6 \
 --rm \
 -it \
---network global_rust \
+--network global_optest \
 -v ./k6/:/k6/ \
 grafana/k6:1.1.0 \
 run /k6/k6_2_ramping_create_user.js
@@ -217,7 +217,7 @@ docker run \
 --name container_k6 \
 --rm \
 -it \
---network global_rust \
+--network global_optest \
 -v ./k6/:/k6/ \
 grafana/k6:1.1.0 \
 run /k6/k6_3_ramping_get_user_by_id.js
