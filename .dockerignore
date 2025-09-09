@@ -9,4 +9,6 @@ k6/
 target/
 postgresql/
 postgresql_initdb/
-test*.sh
+sysbench/
+wrk/
+*.sh
